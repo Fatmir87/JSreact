@@ -13,7 +13,7 @@ class Todo extends Component {
 
   render() {
     return (
-      <div>
+      <div style={this.getStyle()}>
         <input
           type="checkbox"
           onChange={this.props.markCompleteProp2.bind(
@@ -21,11 +21,23 @@ class Todo extends Component {
             this.props.todoProp.id
           )}
         ></input>
-        <div style={this.getStyle()}>{this.props.todoProp.title}</div>
+
+        {this.props.todoProp.title}
+        <button style={buttonStyle}>x</button>
       </div>
     );
   }
 }
+
+const buttonStyle = {
+  background: "#ff0000",
+  color: "#fff",
+  border: "none",
+  padding: "5px 9px",
+  borderRadius: "50%",
+  cursor: "pointer",
+  float: "right",
+};
 
 Todo.propTypes = {
   todoProp: PropTypes.object.isRequired,

@@ -50,7 +50,6 @@ class App extends Component {
       })
       .then((res) => {
         this.setState({ todos: [...this.state.todos, res.data] });
-        // console.log(res.data);
       });
   };
 

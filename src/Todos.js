@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 
 class Todos extends Component {
   render() {
-    console.log(this.props.todos);
     const todos = this.props.todos;
     return (
       <div>
